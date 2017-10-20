@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/straticjs/stratic-default-categories#readme",
   "dependencies": {
+    "es7-array.prototype.includes": "^2.0.0",
     "through2": "^2.0.1"
   }
 }

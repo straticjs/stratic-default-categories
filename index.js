@@ -15,10 +15,16 @@
 
 'use strict';
 
+if (!Array.prototype.includes) require('es7-array.prototype.includes');
+
 var through2 = require('through2');
 
-module.exports = function() {
+module.exports = function(_arr) {
 	return through2.obj(function(file, enc, callback) {
+		var arr = _arr.filter(el => !file.data.noncategories.includes(el))
+		              .filter(el => !file.data.categories.includes(el));
+
+		file.data.categories = file.data.categories.concat(arr);
 
 		this.push(file);
 		callback();
