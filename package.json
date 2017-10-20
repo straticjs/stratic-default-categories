@@ -1,0 +1,26 @@
+{
+  "name": "stratic-default-categories",
+  "version": "1.0.0",
+  "description": "Gulp plugin to add default categories for Stratic posts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/straticjs/stratic-default-categories.git"
+  },
+  "keywords": [
+    "stratic",
+    "gulpplugin"
+  ],
+  "author": "AJ Jordan <alex@strugee.net>",
+  "license": "LGPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/straticjs/stratic-default-categories/issues"
+  },
+  "homepage": "https://github.com/straticjs/stratic-default-categories#readme",
+  "dependencies": {
+    "through2": "^2.0.1"
+  }
+}
