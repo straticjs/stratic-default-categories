@@ -21,7 +21,7 @@ var through2 = require('through2');
 
 module.exports = function(_arr) {
 	return through2.obj(function(file, enc, callback) {
-		var arr = _arr.filter(el => !file.data.noncategories.includes(el))
+		var arr = _arr.filter(el => !(file.data.noncategories || []).includes(el))
 		              .filter(el => !file.data.categories.includes(el));
 
 		file.data.categories = file.data.categories.concat(arr);
