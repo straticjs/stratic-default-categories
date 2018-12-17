@@ -57,7 +57,7 @@ gulp.task('post-index', function() {
         .pipe(remark().use(remarkHtml))
         .pipe(straticDateInPath())
         .pipe(addsrc('src/blog/index.jade'))
-s        .pipe(straticPostsToIndex('index.jade'))
+        .pipe(straticPostsToIndex('index.jade'))
         .pipe(straticDefaultCategories(categoryDefaults))
         .pipe(jade({pretty: true, basedir: __dirname}))
         .pipe(rename({ extname: '.html' }))
