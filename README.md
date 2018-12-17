@@ -38,7 +38,7 @@ Complete example `gulpfile.js`:
 
 ```js
 var gulp = require('gulp');
-var frontmatter = require('gulp-gray-matter');
+var frontMatter = require('gulp-gray-matter');
 var remark = require('gulp-remark');
 var remarkHtml = require('remark-html');
 var straticDateInPath = require('stratic-date-in-path');
@@ -53,7 +53,7 @@ var categoryDefaults = ['category-name'];
 
 gulp.task('post-index', function() {
     gulp.src('*.md')
-        .pipe(frontmatter())
+        .pipe(frontMatter())
         .pipe(remark().use(remarkHtml))
         .pipe(straticDateInPath())
         .pipe(addsrc('src/blog/index.jade'))
